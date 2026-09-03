@@ -1,4 +1,4 @@
-# GeoAPI::BatchRequest
+# GeoSearch::BatchRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::BatchRequest.new(
+instance = GeoSearch::BatchRequest.new(
   ids: [5391959, 5128581, 4887398]
 )
 ```

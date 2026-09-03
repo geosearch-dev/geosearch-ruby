@@ -1,4 +1,4 @@
-# GeoAPI::BoundarySingleResponse
+# GeoSearch::BoundarySingleResponse
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::BoundarySingleResponse.new(
+instance = GeoSearch::BoundarySingleResponse.new(
   data: null
 )
 ```

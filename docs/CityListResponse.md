@@ -1,4 +1,4 @@
-# GeoAPI::CityListResponse
+# GeoSearch::CityListResponse
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::CityListResponse.new(
+instance = GeoSearch::CityListResponse.new(
   data: null,
   meta: null
 )

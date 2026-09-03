@@ -1,4 +1,4 @@
-# GeoAPI::HierarchyNode
+# GeoSearch::HierarchyNode
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::HierarchyNode.new(
+instance = GeoSearch::HierarchyNode.new(
   geoname_id: 5391959,
   name: San Francisco,
   type: city,

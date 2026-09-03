@@ -1,4 +1,4 @@
-# GeoAPI::RegionsApi
+# GeoSearch::RegionsApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -22,16 +22,16 @@ Returns a single region by its numeric ID.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::RegionsApi.new
+api_instance = GeoSearch::RegionsApi.new
 id = 5332921 # Integer | Region ID
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -42,7 +42,7 @@ begin
   # Get region by ID
   result = api_instance.get_region(id, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->get_region: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RegionSingleResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->get_region_with_http_info: #{e}"
 end
 ```
@@ -99,16 +99,16 @@ Returns a paginated list of cities within a specific region.  THIS ENDPOINT AND 
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::RegionsApi.new
+api_instance = GeoSearch::RegionsApi.new
 id = 5332921 # Integer | Region ID
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -122,7 +122,7 @@ begin
   # List cities in a region
   result = api_instance.list_region_cities(id, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->list_region_cities: #{e}"
 end
 ```
@@ -140,7 +140,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CityListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->list_region_cities_with_http_info: #{e}"
 end
 ```
@@ -182,16 +182,16 @@ Returns a paginated list of regions with optional filtering by country, level, a
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::RegionsApi.new
+api_instance = GeoSearch::RegionsApi.new
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   country: 'US', # String | Filter by ISO alpha-2 country code
@@ -208,7 +208,7 @@ begin
   # List regions
   result = api_instance.list_regions(opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->list_regions: #{e}"
 end
 ```
@@ -226,7 +226,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RegionListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->list_regions_with_http_info: #{e}"
 end
 ```
@@ -271,16 +271,16 @@ Returns all cities that are direct children of the specified region in the admin
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::RegionsApi.new
+api_instance = GeoSearch::RegionsApi.new
 id = 5332921 # Integer | Region ID
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -291,7 +291,7 @@ begin
   # List child cities of a region
   result = api_instance.region_children(id, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->region_children: #{e}"
 end
 ```
@@ -309,7 +309,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CityListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling RegionsApi->region_children_with_http_info: #{e}"
 end
 ```

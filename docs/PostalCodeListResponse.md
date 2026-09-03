@@ -1,4 +1,4 @@
-# GeoAPI::PostalCodeListResponse
+# GeoSearch::PostalCodeListResponse
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::PostalCodeListResponse.new(
+instance = GeoSearch::PostalCodeListResponse.new(
   data: null,
   meta: null
 )

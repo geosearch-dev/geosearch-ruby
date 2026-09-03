@@ -1,4 +1,4 @@
-# GeoAPI::HealthApi
+# GeoSearch::HealthApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -19,15 +19,15 @@ Returns the API health status and database connectivity. No authentication requi
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 
-api_instance = GeoAPI::HealthApi.new
+api_instance = GeoSearch::HealthApi.new
 
 begin
   # Health check
   result = api_instance.get_status
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling HealthApi->get_status: #{e}"
 end
 ```
@@ -45,7 +45,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetStatus200Response>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling HealthApi->get_status_with_http_info: #{e}"
 end
 ```

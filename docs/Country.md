@@ -1,4 +1,4 @@
-# GeoAPI::Country
+# GeoSearch::Country
 
 ## Properties
 
@@ -31,9 +31,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::Country.new(
+instance = GeoSearch::Country.new(
   id: 1,
   geoname_id: 6252001,
   iso_code: US,

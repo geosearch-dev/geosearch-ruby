@@ -1,4 +1,4 @@
-# GeoAPI::CitiesApi
+# GeoSearch::CitiesApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -22,16 +22,16 @@ Returns the full administrative hierarchy for a city, ordered from the city itse
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CitiesApi.new
+api_instance = GeoSearch::CitiesApi.new
 id = 5391959 # Integer | City ID
 opts = {
   lang: 'de' # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -41,7 +41,7 @@ begin
   # Get administrative hierarchy for a city
   result = api_instance.city_hierarchy(id, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->city_hierarchy: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <HierarchyListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->city_hierarchy_with_http_info: #{e}"
 end
 ```
@@ -97,16 +97,16 @@ Returns a single city by its numeric ID.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CitiesApi.new
+api_instance = GeoSearch::CitiesApi.new
 id = 5391959 # Integer | City ID
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -117,7 +117,7 @@ begin
   # Get city by ID
   result = api_instance.get_city(id, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->get_city: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CitySingleResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->get_city_with_http_info: #{e}"
 end
 ```
@@ -174,16 +174,16 @@ Returns a paginated list of cities with optional filtering by country, admin cod
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CitiesApi.new
+api_instance = GeoSearch::CitiesApi.new
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   country: 'US,CA', # String | Filter by ISO alpha-2 country codes (comma-separated)
@@ -206,7 +206,7 @@ begin
   # List cities
   result = api_instance.list_cities(opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->list_cities: #{e}"
 end
 ```
@@ -224,7 +224,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CityListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->list_cities_with_http_info: #{e}"
 end
 ```
@@ -275,16 +275,16 @@ Returns cities near a given latitude/longitude within a specified radius. Result
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CitiesApi.new
+api_instance = GeoSearch::CitiesApi.new
 lat = 37.7749 # Float | Latitude (-90 to 90)
 lon = -122.4194 # Float | Longitude (-180 to 180)
 opts = {
@@ -297,7 +297,7 @@ begin
   # Find nearby cities
   result = api_instance.nearby_cities(lat, lon, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->nearby_cities: #{e}"
 end
 ```
@@ -315,7 +315,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NearbyCityListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CitiesApi->nearby_cities_with_http_info: #{e}"
 end
 ```

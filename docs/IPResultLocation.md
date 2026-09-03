@@ -1,4 +1,4 @@
-# GeoAPI::IPResultLocation
+# GeoSearch::IPResultLocation
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::IPResultLocation.new(
+instance = GeoSearch::IPResultLocation.new(
   latitude: 37.386,
   longitude: -122.0838,
   accuracy_radius: 1000,

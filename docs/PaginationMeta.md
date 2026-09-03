@@ -1,4 +1,4 @@
-# GeoAPI::PaginationMeta
+# GeoSearch::PaginationMeta
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::PaginationMeta.new(
+instance = GeoSearch::PaginationMeta.new(
   next_cursor: eyJpZCI6MjV9,
   prev_cursor: null,
   has_next: true,

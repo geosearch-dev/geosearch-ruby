@@ -1,4 +1,4 @@
-# GeoAPI::UpgradeDetail
+# GeoSearch::UpgradeDetail
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::UpgradeDetail.new(
+instance = GeoSearch::UpgradeDetail.new(
   upgrade_url: https://geosearch.dev/dashboard#billing
 )
 ```

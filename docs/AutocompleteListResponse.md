@@ -1,4 +1,4 @@
-# GeoAPI::AutocompleteListResponse
+# GeoSearch::AutocompleteListResponse
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::AutocompleteListResponse.new(
+instance = GeoSearch::AutocompleteListResponse.new(
   data: null,
   meta: null
 )

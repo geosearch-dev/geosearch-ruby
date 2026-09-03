@@ -1,4 +1,4 @@
-# GeoAPI::NearbyCity
+# GeoSearch::NearbyCity
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::NearbyCity.new(
+instance = GeoSearch::NearbyCity.new(
   id: 5391959,
   name: San Francisco,
   country_code: US,

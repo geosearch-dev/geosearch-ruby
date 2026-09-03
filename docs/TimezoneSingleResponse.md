@@ -1,4 +1,4 @@
-# GeoAPI::TimezoneSingleResponse
+# GeoSearch::TimezoneSingleResponse
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::TimezoneSingleResponse.new(
+instance = GeoSearch::TimezoneSingleResponse.new(
   data: null
 )
 ```

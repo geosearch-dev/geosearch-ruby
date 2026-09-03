@@ -1,4 +1,4 @@
-# GeoAPI::IPResult
+# GeoSearch::IPResult
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::IPResult.new(
+instance = GeoSearch::IPResult.new(
   ip: 8.8.8.8,
   network: 8.8.8.0/24,
   continent: null,

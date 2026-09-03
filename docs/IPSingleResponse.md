@@ -1,4 +1,4 @@
-# GeoAPI::IPSingleResponse
+# GeoSearch::IPSingleResponse
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::IPSingleResponse.new(
+instance = GeoSearch::IPSingleResponse.new(
   data: null
 )
 ```

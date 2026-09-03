@@ -1,4 +1,4 @@
-# GeoAPI::IPResultRegion
+# GeoSearch::IPResultRegion
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::IPResultRegion.new(
+instance = GeoSearch::IPResultRegion.new(
   iso_code: CA,
   name: California
 )

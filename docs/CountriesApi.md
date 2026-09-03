@@ -1,4 +1,4 @@
-# GeoAPI::CountriesApi
+# GeoSearch::CountriesApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -22,16 +22,16 @@ Returns countries that share a border with the specified country.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CountriesApi.new
+api_instance = GeoSearch::CountriesApi.new
 code = 'DE' # String | ISO alpha-2 country code
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -42,7 +42,7 @@ begin
   # List neighboring countries
   result = api_instance.country_neighbors(code, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->country_neighbors: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CountryListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->country_neighbors_with_http_info: #{e}"
 end
 ```
@@ -99,16 +99,16 @@ Returns a single country by its ISO alpha-2 code.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CountriesApi.new
+api_instance = GeoSearch::CountriesApi.new
 code = 'US' # String | ISO alpha-2 country code
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -119,7 +119,7 @@ begin
   # Get country by ISO code
   result = api_instance.get_country(code, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->get_country: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CountrySingleResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->get_country_with_http_info: #{e}"
 end
 ```
@@ -176,16 +176,16 @@ Returns a paginated list of countries with optional filtering and sorting.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CountriesApi.new
+api_instance = GeoSearch::CountriesApi.new
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   continent: 'AF', # String | Filter by continent code (AF, AN, AS, EU, NA, OC, SA)
@@ -202,7 +202,7 @@ begin
   # List countries
   result = api_instance.list_countries(opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->list_countries: #{e}"
 end
 ```
@@ -220,7 +220,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CountryListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->list_countries_with_http_info: #{e}"
 end
 ```
@@ -265,16 +265,16 @@ Returns a paginated list of regions (administrative divisions) within a country.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::CountriesApi.new
+api_instance = GeoSearch::CountriesApi.new
 code = 'US' # String | ISO alpha-2 country code
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -288,7 +288,7 @@ begin
   # List regions in a country
   result = api_instance.list_country_regions(code, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->list_country_regions: #{e}"
 end
 ```
@@ -306,7 +306,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RegionListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling CountriesApi->list_country_regions_with_http_info: #{e}"
 end
 ```

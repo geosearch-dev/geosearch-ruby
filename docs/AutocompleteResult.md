@@ -1,4 +1,4 @@
-# GeoAPI::AutocompleteResult
+# GeoSearch::AutocompleteResult
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::AutocompleteResult.new(
+instance = GeoSearch::AutocompleteResult.new(
   id: 5391959,
   name: San Francisco,
   type: city,

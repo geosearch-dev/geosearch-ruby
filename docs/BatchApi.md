@@ -1,4 +1,4 @@
-# GeoAPI::BatchApi
+# GeoSearch::BatchApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -21,17 +21,17 @@ Returns multiple cities in a single request. Maximum 50 IDs per request.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::BatchApi.new
-batch_request = GeoAPI::BatchRequest.new({ids: [5391959,  5128581,  4887398]}) # BatchRequest | 
+api_instance = GeoSearch::BatchApi.new
+batch_request = GeoSearch::BatchRequest.new({ids: [5391959,  5128581,  4887398]}) # BatchRequest | 
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   fields: 'name,population,iso_code' # String | Comma-separated list of fields to include in the response
@@ -41,7 +41,7 @@ begin
   # Batch lookup cities by IDs
   result = api_instance.batch_cities(batch_request, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling BatchApi->batch_cities: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CityListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling BatchApi->batch_cities_with_http_info: #{e}"
 end
 ```
@@ -98,17 +98,17 @@ Returns multiple countries in a single request. Maximum 50 IDs per request.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::BatchApi.new
-batch_request = GeoAPI::BatchRequest.new({ids: [5391959,  5128581,  4887398]}) # BatchRequest | 
+api_instance = GeoSearch::BatchApi.new
+batch_request = GeoSearch::BatchRequest.new({ids: [5391959,  5128581,  4887398]}) # BatchRequest | 
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   fields: 'name,population,iso_code' # String | Comma-separated list of fields to include in the response
@@ -118,7 +118,7 @@ begin
   # Batch lookup countries by IDs
   result = api_instance.batch_countries(batch_request, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling BatchApi->batch_countries: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CountryListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling BatchApi->batch_countries_with_http_info: #{e}"
 end
 ```
@@ -175,17 +175,17 @@ Returns multiple regions in a single request. Maximum 50 IDs per request.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::BatchApi.new
-batch_request = GeoAPI::BatchRequest.new({ids: [5391959,  5128581,  4887398]}) # BatchRequest | 
+api_instance = GeoSearch::BatchApi.new
+batch_request = GeoSearch::BatchRequest.new({ids: [5391959,  5128581,  4887398]}) # BatchRequest | 
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   fields: 'name,population,iso_code' # String | Comma-separated list of fields to include in the response
@@ -195,7 +195,7 @@ begin
   # Batch lookup regions by IDs
   result = api_instance.batch_regions(batch_request, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling BatchApi->batch_regions: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RegionListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling BatchApi->batch_regions_with_http_info: #{e}"
 end
 ```

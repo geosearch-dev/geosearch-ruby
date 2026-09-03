@@ -1,4 +1,4 @@
-# GeoAPI::GetStatus200ResponseData
+# GeoSearch::GetStatus200ResponseData
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::GetStatus200ResponseData.new(
+instance = GeoSearch::GetStatus200ResponseData.new(
   status: healthy,
   database: connected
 )

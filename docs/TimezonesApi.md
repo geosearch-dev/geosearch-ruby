@@ -1,4 +1,4 @@
-# GeoAPI::TimezonesApi
+# GeoSearch::TimezonesApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -20,16 +20,16 @@ Returns a single timezone by its IANA identifier. Note: IANA timezone IDs contai
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::TimezonesApi.new
+api_instance = GeoSearch::TimezonesApi.new
 tz_id = 'America/New_York' # String | IANA timezone ID (e.g., America/New_York)
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -40,7 +40,7 @@ begin
   # Get timezone by IANA ID
   result = api_instance.get_timezone(tz_id, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling TimezonesApi->get_timezone: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TimezoneSingleResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling TimezonesApi->get_timezone_with_http_info: #{e}"
 end
 ```
@@ -97,16 +97,16 @@ Returns a paginated list of timezones with optional filtering by country.
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::TimezonesApi.new
+api_instance = GeoSearch::TimezonesApi.new
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   country: 'US', # String | Filter by ISO alpha-2 country code
@@ -120,7 +120,7 @@ begin
   # List timezones
   result = api_instance.list_timezones(opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling TimezonesApi->list_timezones: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TimezoneListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling TimezonesApi->list_timezones_with_http_info: #{e}"
 end
 ```

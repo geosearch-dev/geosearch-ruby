@@ -1,4 +1,4 @@
-# GeoAPI::SearchApi
+# GeoSearch::SearchApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -22,16 +22,16 @@ Returns autocomplete suggestions matching a query string across cities, regions,
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::SearchApi.new
+api_instance = GeoSearch::SearchApi.new
 q = 'San Fran' # String | Search query (minimum 2 characters)
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -43,7 +43,7 @@ begin
   # Autocomplete search
   result = api_instance.autocomplete(q, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->autocomplete: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AutocompleteListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->autocomplete_with_http_info: #{e}"
 end
 ```
@@ -101,16 +101,16 @@ Returns the administrative areas whose BOUNDARY POLYGONS CONTAIN the given coord
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::SearchApi.new
+api_instance = GeoSearch::SearchApi.new
 lat = 37.7749 # Float | Latitude (-90 to 90). Must be a finite number: `NaN` and `Infinity` are rejected with a 400 rather than being passed to the spatial index, which would answer them with an ordinary \"not found\".
 lon = -122.4194 # Float | Longitude (-180 to 180). Must be a finite number; see `lat`.
 opts = {
@@ -121,7 +121,7 @@ begin
   # Resolve coordinates to their containing administrative areas
   result = api_instance.resolve_coordinate(lat, lon, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->resolve_coordinate: #{e}"
 end
 ```
@@ -139,7 +139,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <HierarchyListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->resolve_coordinate_with_http_info: #{e}"
 end
 ```
@@ -178,16 +178,16 @@ Returns the nearest city for a given latitude/longitude. Uses PostGIS spatial in
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::SearchApi.new
+api_instance = GeoSearch::SearchApi.new
 lat = 37.7749 # Float | Latitude (-90 to 90)
 lon = -122.4194 # Float | Longitude (-180 to 180)
 opts = {
@@ -198,7 +198,7 @@ begin
   # Reverse geocode coordinates
   result = api_instance.reverse_geocode(lat, lon, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->reverse_geocode: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ReverseGeocodeSingleResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->reverse_geocode_with_http_info: #{e}"
 end
 ```
@@ -255,16 +255,16 @@ Performs a fuzzy text search across countries, regions, and cities using trigram
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::SearchApi.new
+api_instance = GeoSearch::SearchApi.new
 q = 'San Fran' # String | Search query (minimum 2 characters)
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
@@ -277,7 +277,7 @@ begin
   # Cross-type search
   result = api_instance.search(q, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->search: #{e}"
 end
 ```
@@ -295,7 +295,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SearchListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling SearchApi->search_with_http_info: #{e}"
 end
 ```

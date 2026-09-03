@@ -1,4 +1,4 @@
-# GeoAPI::Timezone
+# GeoSearch::Timezone
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::Timezone.new(
+instance = GeoSearch::Timezone.new(
   id: null,
   country_code: US,
   timezone_id: America/New_York,

@@ -1,4 +1,4 @@
-# GeoAPI::IPResultContinent
+# GeoSearch::IPResultContinent
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::IPResultContinent.new(
+instance = GeoSearch::IPResultContinent.new(
   code: NA,
   name: North America
 )

@@ -1,4 +1,4 @@
-# GeoAPI::City
+# GeoSearch::City
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::City.new(
+instance = GeoSearch::City.new(
   id: 5391959,
   geoname_id: 5391959,
   name: San Francisco,

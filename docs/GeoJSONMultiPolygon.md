@@ -1,4 +1,4 @@
-# GeoAPI::GeoJSONMultiPolygon
+# GeoSearch::GeoJSONMultiPolygon
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::GeoJSONMultiPolygon.new(
+instance = GeoSearch::GeoJSONMultiPolygon.new(
   type: null,
   coordinates: null
 )

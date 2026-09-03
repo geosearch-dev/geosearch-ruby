@@ -1,4 +1,4 @@
-# GeoAPI::ReverseGeocodeResult
+# GeoSearch::ReverseGeocodeResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::ReverseGeocodeResult.new(
+instance = GeoSearch::ReverseGeocodeResult.new(
   city: null,
   distance_km: 0.3
 )

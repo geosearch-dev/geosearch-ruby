@@ -1,4 +1,4 @@
-# GeoAPI::Boundary
+# GeoSearch::Boundary
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::Boundary.new(
+instance = GeoSearch::Boundary.new(
   geoname_id: 6252001,
   name: United States,
   type: country,

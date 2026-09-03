@@ -1,4 +1,4 @@
-# GeoAPI::QuotaDetail
+# GeoSearch::QuotaDetail
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::QuotaDetail.new(
+instance = GeoSearch::QuotaDetail.new(
   limit: 2000000,
   used: 2000000,
   resets_at: 2026-03-01T00:00:00Z,

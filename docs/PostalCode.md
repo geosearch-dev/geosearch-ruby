@@ -1,4 +1,4 @@
-# GeoAPI::PostalCode
+# GeoSearch::PostalCode
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::PostalCode.new(
+instance = GeoSearch::PostalCode.new(
   id: null,
   country_code: US,
   postal_code: 94105,

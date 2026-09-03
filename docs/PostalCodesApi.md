@@ -1,4 +1,4 @@
-# GeoAPI::PostalCodesApi
+# GeoSearch::PostalCodesApi
 
 All URIs are relative to *https://geosearch.dev*
 
@@ -20,16 +20,16 @@ Returns a paginated list of postal codes with optional filtering by country and 
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::PostalCodesApi.new
+api_instance = GeoSearch::PostalCodesApi.new
 opts = {
   lang: 'de', # String | ISO 639-1 language code for localized names (e.g., de, fr, ja)
   country: 'US', # String | Filter by ISO alpha-2 country codes (comma-separated)
@@ -46,7 +46,7 @@ begin
   # List postal codes
   result = api_instance.list_postal_codes(opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling PostalCodesApi->list_postal_codes: #{e}"
 end
 ```
@@ -64,7 +64,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostalCodeListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling PostalCodesApi->list_postal_codes_with_http_info: #{e}"
 end
 ```
@@ -109,16 +109,16 @@ Returns the nearest postal codes to a given latitude/longitude using PostGIS spa
 
 ```ruby
 require 'time'
-require 'geoapi'
+require 'geosearch'
 # setup authorization
-GeoAPI.configure do |config|
+GeoSearch.configure do |config|
   # Configure API key authorization: apiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = GeoAPI::PostalCodesApi.new
+api_instance = GeoSearch::PostalCodesApi.new
 lat = 37.7749 # Float | Latitude (-90 to 90)
 lon = -122.4194 # Float | Longitude (-180 to 180)
 opts = {
@@ -130,7 +130,7 @@ begin
   # Find nearest postal codes
   result = api_instance.nearest_postal_code(lat, lon, opts)
   p result
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling PostalCodesApi->nearest_postal_code: #{e}"
 end
 ```
@@ -148,7 +148,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PostalCodeListResponse>
-rescue GeoAPI::ApiError => e
+rescue GeoSearch::ApiError => e
   puts "Error when calling PostalCodesApi->nearest_postal_code_with_http_info: #{e}"
 end
 ```

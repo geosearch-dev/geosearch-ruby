@@ -1,4 +1,4 @@
-# GeoAPI::HierarchyListResponse
+# GeoSearch::HierarchyListResponse
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::HierarchyListResponse.new(
+instance = GeoSearch::HierarchyListResponse.new(
   data: null,
   meta: null
 )

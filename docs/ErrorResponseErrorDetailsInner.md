@@ -1,4 +1,4 @@
-# GeoAPI::ErrorResponseErrorDetailsInner
+# GeoSearch::ErrorResponseErrorDetailsInner
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::ErrorResponseErrorDetailsInner.new(
+instance = GeoSearch::ErrorResponseErrorDetailsInner.new(
   field: null,
   issue: null
 )

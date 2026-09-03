@@ -1,4 +1,4 @@
-# GeoAPI::ErrorResponseError
+# GeoSearch::ErrorResponseError
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::ErrorResponseError.new(
+instance = GeoSearch::ErrorResponseError.new(
   code: not_found,
   message: The requested resource was not found,
   details: null,

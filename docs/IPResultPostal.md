@@ -1,4 +1,4 @@
-# GeoAPI::IPResultPostal
+# GeoSearch::IPResultPostal
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::IPResultPostal.new(
+instance = GeoSearch::IPResultPostal.new(
   code: 94043
 )
 ```

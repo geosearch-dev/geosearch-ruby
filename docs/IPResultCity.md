@@ -1,4 +1,4 @@
-# GeoAPI::IPResultCity
+# GeoSearch::IPResultCity
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::IPResultCity.new(
+instance = GeoSearch::IPResultCity.new(
   name: Mountain View
 )
 ```

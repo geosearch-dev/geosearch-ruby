@@ -1,4 +1,4 @@
-# GeoAPI::ReverseGeocodeSingleResponse
+# GeoSearch::ReverseGeocodeSingleResponse
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::ReverseGeocodeSingleResponse.new(
+instance = GeoSearch::ReverseGeocodeSingleResponse.new(
   data: null
 )
 ```

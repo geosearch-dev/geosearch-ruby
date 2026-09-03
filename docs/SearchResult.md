@@ -1,4 +1,4 @@
-# GeoAPI::SearchResult
+# GeoSearch::SearchResult
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'geoapi'
+require 'geosearch'
 
-instance = GeoAPI::SearchResult.new(
+instance = GeoSearch::SearchResult.new(
   type: city,
   id: 5391959,
   name: San Francisco,
