@@ -31,7 +31,7 @@ instance = GeoSearch::Region.new(
   name: California,
   ascii_name: California,
   level: 1,
-  parent_geoname_id: null,
+  parent_geoname_id: 6252001,
   population: 39538223,
   latitude: 36.778,
   longitude: -119.418,

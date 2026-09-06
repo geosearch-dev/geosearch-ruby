@@ -17,7 +17,7 @@ require 'geosearch'
 
 instance = GeoSearch::PaginationMeta.new(
   next_cursor: eyJpZCI6MjV9,
-  prev_cursor: null,
+  prev_cursor: eyJpZCI6MX0,
   has_next: true,
   has_prev: false,
   count: 25

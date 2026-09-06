@@ -17,7 +17,7 @@
 require 'geosearch'
 
 instance = GeoSearch::Timezone.new(
-  id: null,
+  id: 424,
   country_code: US,
   timezone_id: America/New_York,
   gmt_offset: -5.0,

@@ -14,7 +14,7 @@ require 'geosearch'
 
 instance = GeoSearch::GeoJSONGeometry.new(
   type: MultiPolygon,
-  coordinates: null
+  coordinates: [[[[-124.7, 48.4], [-124.6, 48.4], [-124.6, 48.3], [-124.7, 48.4]]]]
 )
 ```
 

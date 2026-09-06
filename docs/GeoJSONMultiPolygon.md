@@ -13,8 +13,8 @@
 require 'geosearch'
 
 instance = GeoSearch::GeoJSONMultiPolygon.new(
-  type: null,
-  coordinates: null
+  type: MultiPolygon,
+  coordinates: [[[[-124.7, 48.4], [-124.6, 48.4], [-124.6, 48.3], [-124.7, 48.4]]]]
 )
 ```
 

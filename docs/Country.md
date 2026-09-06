@@ -55,7 +55,7 @@ instance = GeoSearch::Country.new(
   neighbours: [CA, MX],
   latitude: 39.76,
   longitude: -98.5,
-  flag_emoji: null,
+  flag_emoji: 🇺🇸,
   geometry: null
 )
 ```
