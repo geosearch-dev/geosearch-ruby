@@ -4,7 +4,7 @@ GeoSearch - the Ruby gem for the GeoSearch
 
 Geographic data REST API — modern replacement for GeoNames.
 
-Serves countries, regions, cities, postal codes, timezones, and IP geolocation data
+Serves countries, regions, cities, postal codes, and timezones
 through a fast, well-documented JSON API with cursor-based pagination and field selection.
 
 ## Authentication
@@ -135,8 +135,6 @@ Class | Method | HTTP request | Description
 *GeoSearch::CountriesApi* | [**list_countries**](docs/CountriesApi.md#list_countries) | **GET** /v1/countries | List countries
 *GeoSearch::CountriesApi* | [**list_country_regions**](docs/CountriesApi.md#list_country_regions) | **GET** /v1/countries/{code}/regions | List regions in a country
 *GeoSearch::HealthApi* | [**get_status**](docs/HealthApi.md#get_status) | **GET** /v1/status | Health check
-*GeoSearch::IPGeolocationApi* | [**lookup_ip**](docs/IPGeolocationApi.md#lookup_ip) | **GET** /v1/ip/{address} | IP geolocation lookup
-*GeoSearch::IPGeolocationApi* | [**lookup_my_ip**](docs/IPGeolocationApi.md#lookup_my_ip) | **GET** /v1/ip/me | Caller's IP geolocation
 *GeoSearch::PostalCodesApi* | [**list_postal_codes**](docs/PostalCodesApi.md#list_postal_codes) | **GET** /v1/postal-codes | List postal codes
 *GeoSearch::PostalCodesApi* | [**nearest_postal_code**](docs/PostalCodesApi.md#nearest_postal_code) | **GET** /v1/postal-codes/nearest | Find nearest postal codes
 *GeoSearch::RegionsApi* | [**get_region**](docs/RegionsApi.md#get_region) | **GET** /v1/regions/{id} | Get region by ID
@@ -174,14 +172,6 @@ Class | Method | HTTP request | Description
  - [GeoSearch::GetStatus200ResponseData](docs/GetStatus200ResponseData.md)
  - [GeoSearch::HierarchyListResponse](docs/HierarchyListResponse.md)
  - [GeoSearch::HierarchyNode](docs/HierarchyNode.md)
- - [GeoSearch::IPResult](docs/IPResult.md)
- - [GeoSearch::IPResultCity](docs/IPResultCity.md)
- - [GeoSearch::IPResultContinent](docs/IPResultContinent.md)
- - [GeoSearch::IPResultCountry](docs/IPResultCountry.md)
- - [GeoSearch::IPResultLocation](docs/IPResultLocation.md)
- - [GeoSearch::IPResultPostal](docs/IPResultPostal.md)
- - [GeoSearch::IPResultRegion](docs/IPResultRegion.md)
- - [GeoSearch::IPSingleResponse](docs/IPSingleResponse.md)
  - [GeoSearch::NearbyCity](docs/NearbyCity.md)
  - [GeoSearch::NearbyCityListResponse](docs/NearbyCityListResponse.md)
  - [GeoSearch::PaginationMeta](docs/PaginationMeta.md)
